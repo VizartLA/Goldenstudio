@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden studio</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logo">
+        <a class="header__logo-link" href="#">
+          <img class="header__logo-img" src="images/logo.svg" alt="Golden Studio">
+        </a>
+      </div>
+
+      <nav class="header__navigation">
+        <ul class="header__list" id="mobileMenu">
+          <li class="header__item">
+            <a class="header__link" href="#">Услуги</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Портфолио</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Рекомендации</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">О компании</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Контакты</a>
+          </li>
+
+          <li class="header__mobile-contacts">
+            <div class="header__phone">
+              <div class="header__phone-icon">
+                <img src="images/phone-icon.svg" alt="Телефон">
+              </div>
+              <div class="header__phone-content">
+                <a class="header__phone-link" href="tel:84955325421">+7 (495) 532-54-21</a>
+                <a class="header__phone-link" href="tel:89295204676">+7 (929) 520-46-76</a>
+              </div>
+            </div>
+
+            <div class="header__button callback-btn">
+              <a class="header__button-link" href="#">Перезвоните мне</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="header__phone">
+          <div class="header__phone-icon">
+            <img class="header__phone-icon--img" src="images/phone-icon.svg" alt="Телефон">
+          </div>
+          <div class="header__phone-content">
+            <a class="header__phone-link" href="tel:84955325421">+7 (495)
+              532-54-21</a>
+            <a class="header__phone-link" href="tel:89295204676">+7 (929)
+              520-46-76</a>
+          </div>
+        </div>
+
+        <div class="header__button">
+          <a class="header__button-link callback-btn" href="#">Перезвоните мне</a>
+        </div>
+
+        <div class="header__overlay" id="menuOverlay"></div>
+
+        <button class="header__burger" id="burgerButton" aria-label="Открыть меню" aria-expanded="false" type="button">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+
+      </nav>
+    </div>
+
+    <div class="modal-overlay" id="callbackModal">
+      <div class="modal">
+        <button class="modal__close" aria-label="Закрыть окно">&times;</button>
+        <h2 class="modal__title">Заказать звонок</h2>
+        <form class="modal__form">
+          <div class="modal__form-group">
+            <label for="name" class="modal__label">Ваше имя</label>
+            <input type="text" id="name" class="modal__input" placeholder="Введите ваше имя" required>
+          </div>
+          <div class="modal__form-group">
+            <label for="phone" class="modal__label">Номер телефона</label>
+            <input type="tel" id="phone" class="modal__input" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <button type="submit" class="modal__submit">Оставить заявку</button>
+        </form>
+      </div>
+    </div>
+
+  </header>

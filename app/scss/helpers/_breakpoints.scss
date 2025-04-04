@@ -1,0 +1,23 @@
+@use "sass:map";
+
+$breakpoints: (
+  'xl': 1200px,
+  'lg': 992px,
+  'md': 768px,
+  'sm': 576px,
+  'xs': 375px
+) !default;
+
+@mixin respond-to($breakpoint, $type: 'max') {
+  @if not map.has-key($breakpoints, $breakpoint) {
+    @error "Breakpoint '#{$breakpoint}' not found in $breakpoints";
+  }
+  
+  $value: map.get($breakpoints, $breakpoint);
+  
+  @if $type == 'min' {
+    @media (min-width: $value) { @content; }
+  } @else {
+    @media (max-width: ($value - 1px)) { @content; }
+  }
+}

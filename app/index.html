@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden studio</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logo">
+        <a class="header__logo-link" href="#">
+          <img class="header__logo-img" src="images/logo.svg" alt="Golden Studio">
+        </a>
+      </div>
+      <nav class="header__navigation">
+        <ul class="header__list" id="mobileMenu">
+          <li class="header__item">
+            <a class="header__link" href="#">Услуги</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Портфолио</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Рекомендации</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">О компании</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Контакты</a>
+          </li>
+          <li class="header__mobile-contacts">
+            <div class="header__phone">
+              <div class="header__phone-icon">
+                <img src="images/phone-icon.svg" alt="Телефон">
+              </div>
+              <div class="header__phone-content">
+                <a class="header__phone-link" href="tel:84955325421">+7 (495) 532-54-21</a>
+                <a class="header__phone-link" href="tel:89295204676">+7 (929) 520-46-76</a>
+              </div>
+            </div>
+
+            <div class="header__button callback-btn">
+              <a class="header__button-link" href="#">Перезвоните мне</a>
+            </div>
+          </li>
+        </ul>
+        <div class="header__phone">
+          <div class="header__phone-icon">
+            <img class="header__phone-icon--img" src="images/phone-icon.svg" alt="Телефон">
+          </div>
+          <div class="header__phone-content">
+            <a class="header__phone-link" href="tel:84955325421">+7 (495)
+              532-54-21</a>
+            <a class="header__phone-link" href="tel:89295204676">+7 (929)
+              520-46-76</a>
+          </div>
+        </div>
+        <div class="header__button">
+          <a class="header__button-link callback-btn" href="#">Перезвоните мне</a>
+        </div>
+        <div class="header__overlay" id="menuOverlay"></div>
+        <button class="header__burger" id="burgerButton" aria-label="Открыть меню" aria-expanded="false" type="button">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+
+      </nav>
+    </div>
+
+    <div class="modal-overlay" id="callbackModal">
+      <div class="modal">
+        <button class="modal__close" aria-label="Закрыть окно">&times;</button>
+        <h2 class="modal__title">Заказать звонок</h2>
+        <form class="modal__form">
+          <div class="modal__form-group">
+            <label for="name" class="modal__label">Ваше имя</label>
+            <input type="text" id="name" class="modal__input" placeholder="Введите ваше имя" required>
+          </div>
+          <div class="modal__form-group">
+            <label for="phone" class="modal__label">Номер телефона</label>
+            <input type="tel" id="phone" class="modal__input" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <button type="submit" class="modal__submit">Оставить заявку</button>
+        </form>
+      </div>
+    </div>
+
+  </header>
+
+<main>
+  <section class="seo-advantages">
+
+    <div class="seo-advantages__parallax">
+      <div class="parallax-layer parallax-layer--left">
+        <img src="images/bg-right-bottom.webp" alt="Левое изображение" class="parallax-image">
+      </div>
+      <div class="parallax-layer parallax-layer--right">
+        <img src="images/bg-right-top.webp" alt="Правое верхнее" class="parallax-image">
+        <img src="images/bg-left.webp" alt="Правое нижнее" class="parallax-image">
+      </div>
+    </div>
+
+    <div class="container seo-advantages__container">
+      <h1 class=" seo-advantages__title">Продвижение сайта<br><span>в Яндекс</span><br> с оплатой по ФАКТУ!</h1>
+      <h2 class="seo-advantages__subtitle">Сначала вы видите свой сайт в Топ 5
+        и только потом начинаете платить!</h2>
+      <div class="seo-advantages__button-wrapper">
+        <button class="seo-advantages__button" type="button">
+          Попробовать 7 дней бесплатно
+        </button>
+        <div class="seo-advantages__button-hint">
+          <span class="seo-advantages__hint-text">Жми</span>
+          <img class="seo-advantages__hint-arrow" src="images/seo-advantages-arrow.webp" alt="">
+        </div>
+      </div>
+      <div class="seo-advantages__cards">
+        <ul class="seo-advantages__card-list">
+          <li class="seo-advantages__card-item">
+            <img src="images/seo-advantages-icon1.webp" alt="" class="seo-advantages__card-icon">
+            <h3 class="seo-advantages__card-title">Гарантия</h3>
+            <p class="seo-advantages__card-text">За 6-ю и ниже
+              позицию
+              платить не надо!</p>
+          </li>
+          <li class="seo-advantages__card-item">
+            <img src="images/seo-advantages-icon2.webp" alt="" class="seo-advantages__card-icon">
+            <h3 class="seo-advantages__card-title">Безопасность</h3>
+            <p class="seo-advantages__card-text">Только «белые»
+              методы продвижения,
+              прописанные в договоре</p>
+          </li>
+          <li class="seo-advantages__card-item">
+            <img src="images/seo-advantages-icon3.webp" alt="" class="seo-advantages__card-icon">
+            <h3 class="seo-advantages__card-title">Срок вывода </h3>
+            <p class="seo-advantages__card-text">От 3х дней</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-succes">
+    <div class="container our-succes__container">
+      <h2 class="our-succes__title">Кейсы</h2>
+      <h3 class="our-succes__subtitle">Более <span>500 сайтов</span> компаний в работе</h3>
+      <h3 class="our-succes__subtitle">Более <span>10 000 ключевых слов</span> в Топ 5</h3>
+      <div class="our-succes__slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="our-succes__item">
+              <h4 class="our-succes__item-title">
+                34 ключевых слова<br> за 6 дней
+              </h4>
+              <div class="our-succes__content">
+                <span>Юридические услуги</span>
+                <span>Уфа</span>
+              </div>
+              <div class="our-succes__images">
+                <img src="images/slider1.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="our-succes__item">
+              <h4 class="our-succes__item-title">
+                34 ключевых слова<br> за 6 дней
+              </h4>
+              <div class="our-succes__content">
+                <span>Юридические услуги</span>
+                <span>Уфа</span>
+              </div>
+              <div class="our-succes__images">
+                <img src="images/slider2.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="our-succes__item">
+              <h4 class="our-succes__item-title">
+                34 ключевых слова<br> за 6 дней
+              </h4>
+              <div class="our-succes__content">
+                <span>Юридические услуги</span>
+                <span>Уфа</span>
+              </div>
+              <div class="our-succes__images">
+                <img src="images/slider1.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="our-succes__item">
+              <h4 class="our-succes__item-title">
+                34 ключевых слова<br> за 6 дней
+              </h4>
+              <div class="our-succes__content">
+                <span>Юридические услуги</span>
+                <span>Уфа</span>
+              </div>
+              <div class="our-succes__images">
+                <img src="images/slider1.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="our-succes__item">
+              <h4 class="our-succes__item-title">
+                34 ключевых слова<br> за 6 дней
+              </h4>
+              <div class="our-succes__content">
+                <span>Юридические услуги</span>
+                <span>Уфа</span>
+              </div>
+              <div class="our-succes__images">
+                <img src="images/slider1.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="our-succes__item">
+              <h4 class="our-succes__item-title">
+                34 ключевых слова<br> за 6 дней
+              </h4>
+              <div class="our-succes__content">
+                <span>Юридические услуги</span>
+                <span>Уфа</span>
+              </div>
+              <div class="our-succes__images">
+                <img src="images/slider1.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-arrow our-succes__arrow">
+        <div class="swiper-button-prev swiper1-prev">
+          <img src="images/slider-arrow-left.svg" alt="">
+        </div>
+        <div class="swiper-button-next swiper1-next">
+          <img src="images/slider-arrow-right.svg" alt="">
+        </div>
+      </div>
+      <div class="our-succes__button-wrapper">
+        <button class="our-succes__button" type="button">
+          Получить кейс по вашей тематике
+        </button>
+        <div class="our-succes__button-hint">
+          <span class="our-succes__hint-text">Жми</span>
+          <img class="our-succes__hint-arrow" src="images/our-succes-arrow.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="trust">
+    <div class="container">
+      <h2 class="trust__title">Нам можно доверять</h2>
+      <h3 class="trust__subtitle">Цифры все скажут за нас:</h3>
+      <div class="trust__inner ">
+        <ul class="trust__inner-list">
+          <li class="trust__inner-item">
+            <div class="trust__inner-item-number">
+              16
+            </div>
+            <div class="trust__inner-item-text">
+              Лет на рекламном рынке
+            </div>
+          </li>
+          <li class="trust__inner-item">
+            <div class="trust__inner-item-number">
+              7
+            </div>
+            <div class="trust__inner-item-text">
+              Представительствсо 181 специалистом в штате
+            </div>
+          </li>
+          <li class="trust__inner-item">
+            <div class="trust__inner-item-number">
+              17
+            </div>
+            <div class="trust__inner-item-text">
+              Собственных интернет-проектов с ежедневной аудиторией <br>1 200 000 человек
+            </div>
+          </li>
+          <li class="trust__inner-item">
+            <div class="trust__inner-item-number">
+              4
+            </div>
+            <div class="trust__inner-item-text">
+              Технических отдела: в Москве, Санкт-Петербурге, Бангкоке и Сингапуре
+            </div>
+          </li>
+          <li class="trust__inner-item">
+            <div class="trust__inner-item-number">
+              567
+            </div>
+            <div class="trust__inner-item-text">
+              Сайтов,<br>созданных нами, занимают 1-е места в выдаче Яндекса
+            </div>
+          </li>
+          <li class="trust__inner-item">
+            <div class="trust__inner-item-number">
+              917
+            </div>
+            <div class="trust__inner-item-text">
+              Созданных сайтов
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container reviews__container">
+      <h2 class="reviews__title">Отзывы о работе с нами</h2>
+      <h3 class="reviews__subtitle">Мы очень рады, что наши клиенты довольны и говорят слова благодарности</h3>
+      <div class="reviews-slider-wrapper">
+        <div class="reviews__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="reviews__item">
+                <div class="reviews__images">
+                  <img src="images/reviews-slide1.webp" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews__item">
+                <div class="reviews__images">
+                  <img src="images/reviews-slide2.webp" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews__item">
+                <div class="reviews__images">
+                  <img src="images/reviews-slide3.webp" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews__item">
+                <div class="reviews__images">
+                  <img src="images/reviews-slide4.webp" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews__item">
+                <div class="reviews__images">
+                  <img src="images/reviews-slide4.webp" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-arrow reviews__arrow">
+          <div class="swiper-button-prev swiper2-prev">
+            <img src="images/slider-arrow-left.svg" alt="">
+          </div>
+          <div class="swiper-button-next swiper2-next">
+            <img src="images/slider-arrow-right.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="reviews-audio">
+    <div class="container reviews-audio__container">
+      <img src="images/reviews-parallax-left.webp" alt="" class="parallax-img parallax-left">
+      <img src="images/reviews-parallax-right.webp" alt="" class="parallax-img parallax-right">
+      <h2 class="reviews-audio__title">Не верите бумаге?</h2>
+      <h3 class="reviews-audio__subtitle">Послушайте живые отзывы наших клиентов:</h3>
+      <ul class="reviews-audio__list">
+        <li class="reviews-audio__item">
+          <div class="custom-audio-player" data-audio-src="#">
+            <button class="play-btn">▶</button>
+            <div class="time">0:00 / 0:00</div>
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+              <div class="progress-fill"></div>
+            </div>
+            <button class="volume-btn">
+              <img src="images/voice-icon.webp" alt="Volume" class="volume-icon">
+            </button>
+            <button class="settings-btn">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </button>
+            <div class="speed-menu">
+              <button data-speed="0.5">0.5x</button>
+              <button data-speed="1.0" class="active">1.0x</button>
+              <button data-speed="1.5">1.5x</button>
+              <button data-speed="2.0">2.0x</button>
+            </div>
+          </div>
+          <h4 class="reviews-audio__item-title">ООО ППЦ Черноземье</h4>
+          <span class="reviews-audio__item-name">Екатерина Александровна</span>
+        </li>
+        <li class="reviews-audio__item">
+          <div class="custom-audio-player" data-audio-src="#">
+            <button class="play-btn">▶</button>
+            <div class="time">0:00 / 0:00</div>
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+              <div class="progress-fill"></div>
+            </div>
+            <button class="volume-btn">
+              <img src="images/voice-icon.webp" alt="Volume" class="volume-icon">
+            </button>
+            <button class="settings-btn">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </button>
+            <div class="speed-menu">
+              <button data-speed="0.5">0.5x</button>
+              <button data-speed="1.0" class="active">1.0x</button>
+              <button data-speed="1.5">1.5x</button>
+              <button data-speed="2.0">2.0x</button>
+            </div>
+          </div>
+          <h4 class="reviews-audio__item-title">ООО ППЦ Черноземье</h4>
+          <span class="reviews-audio__item-name">Екатерина Александровна</span>
+        </li>
+        <li class="reviews-audio__item">
+          <div class="custom-audio-player" data-audio-src="#">
+            <button class="play-btn">▶</button>
+            <div class="time">0:00 / 0:00</div>
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+              <div class="progress-fill"></div>
+            </div>
+            <button class="volume-btn">
+              <img src="images/voice-icon.webp" alt="Volume" class="volume-icon">
+            </button>
+            <button class="settings-btn">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </button>
+            <div class="speed-menu">
+              <button data-speed="0.5">0.5x</button>
+              <button data-speed="1.0" class="active">1.0x</button>
+              <button data-speed="1.5">1.5x</button>
+              <button data-speed="2.0">2.0x</button>
+            </div>
+          </div>
+          <h4 class="reviews-audio__item-title">ООО ППЦ Черноземье</h4>
+          <span class="reviews-audio__item-name">Екатерина Александровна</span>
+        </li>
+        <li class="reviews-audio__item">
+          <div class="custom-audio-player" data-audio-src="#">
+            <button class="play-btn">▶</button>
+            <div class="time">0:00 / 0:00</div>
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+              <div class="progress-fill"></div>
+            </div>
+            <button class="volume-btn">
+              <img src="images/voice-icon.webp" alt="Volume" class="volume-icon">
+            </button>
+            <button class="settings-btn">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </button>
+            <div class="speed-menu">
+              <button data-speed="0.5">0.5x</button>
+              <button data-speed="1.0" class="active">1.0x</button>
+              <button data-speed="1.5">1.5x</button>
+              <button data-speed="2.0">2.0x</button>
+            </div>
+          </div>
+          <h4 class="reviews-audio__item-title">ООО ППЦ Черноземье</h4>
+          <span class="reviews-audio__item-name">Екатерина Александровна</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="accordeon">
+    <div class="container">
+      <h2 class="accordeon__title">Вопросы, которые чаще всего нам задают</h2>
+      <div class="accordeon__inner">
+        <div class="accordeon__item">
+          <div class="accordeon__triger">
+            <p class="accordeon__triger-title">
+              Какой рекламный бюджет необходимо выделять ежемесячно?
+            </p>
+          </div>
+          <div class="accordeon__content">
+            <p>
+              Стоимость заявки в SEO значительно ниже, чем в контекстной рекламе. Точную цифру можно определить только
+              после анализа вашего бизнеса и ниши. В среднем наши клиенты получают заявки по цене от 100 до 500 рублей.
+            </p>
+          </div>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__triger">
+            <p class="accordeon__triger-title">
+              Какая стоимость заявки будет в SEO?
+            </p>
+          </div>
+          <div class="accordeon__content">
+            <p>
+              Стоимость заявки в SEO значительно ниже, чем в контекстной рекламе. Точную цифру можно определить только
+              после анализа вашего бизнеса и ниши. В среднем наши клиенты получают заявки по цене от 100 до 500 рублей.
+            </p>
+          </div>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__triger">
+            <p class="accordeon__triger-title">
+              Как я узнаю, сколько клиентов пришло из seo?
+            </p>
+          </div>
+          <div class="accordeon__content">
+            <p>
+              Стоимость заявки в SEO значительно ниже, чем в контекстной рекламе. Точную цифру можно определить только
+              после анализа вашего бизнеса и ниши. В среднем наши клиенты получают заявки по цене от 100 до 500 рублей.
+            </p>
+          </div>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__triger">
+            <p class="accordeon__triger-title">
+              Какие гарантии?
+            </p>
+          </div>
+          <div class="accordeon__content">
+            <p>
+              Стоимость заявки в SEO значительно ниже, чем в контекстной рекламе. Точную цифру можно определить только
+              после анализа вашего бизнеса и ниши. В среднем наши клиенты получают заявки по цене от 100 до 500 рублей.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__container">
+    <h2 class="footer__title"><span>Получить бесплатный запуск</span>
+      вашего сайта и увидьте ваш сайт в <span>Топ 5 уже завтра</span></h2>
+    <div class="footer__button-wrapper">
+      <button class="footer__button" type="button">
+        Получить тестовый период за 0 руб!
+      </button>
+      <div class="footer__button-hint">
+        <span class="footer__hint-text">Жми</span>
+        <img class="footer__hint-arrow" src="images/seo-advantages-arrow.webp" alt="">
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="js/main.min.js"></script>
+</body>
+
+
+
+</html>
