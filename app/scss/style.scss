@@ -1,6 +1,6 @@
 @use "reset";
 @use "helpers/breakpoints" as *;
-@use "node_modules/swiper/swiper-bundle.min.css";
+@use "../../node_modules/swiper/swiper-bundle";
 
 @font-face {
   font-family: "Gilroy-Regular";

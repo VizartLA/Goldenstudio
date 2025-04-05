@@ -1,3 +1,5 @@
+process.env.BROWSERSYNC_CACHE = 'no';
+
 const { src, dest, watch, parallel, series } = require('gulp');
 const sass = require('sass');
 const gulpSass = require('gulp-sass')(sass);
@@ -8,6 +10,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 const avif = require('gulp-avif');
 const webp = require('gulp-webp');
+const mozjpeg = require('imagemin-mozjpeg');
+const optipng = require('imagemin-optipng');
+const svgo = require('imagemin-svgo');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const fonter = require('gulp-fonter');
@@ -138,21 +143,76 @@ function building() {
     .pipe(dest('dist'));
 }
 
-// Запуск сервера и отслеживание изменений
-function watching() {
-  browserSync.init({
-    server: { baseDir: "app/" },
-    notify: false, // Отключаем уведомления (может помочь с ошибкой eazy-logger)
-    open: true,
-    port: 3000, // Явное указание порта
-    ui: false, // Отключаем UI (опционально)
+// Запуск сервера
+function serve() {
+  return new Promise((resolve) => {
+    browserSync.init({
+      server: { 
+        baseDir: "app/",
+        serveStaticOptions: {
+          extensions: ['html']
+        }
+      },
+      notify: false,
+      open: true,
+      port: 3000,
+      ui: false,
+      reloadDebounce: 2000,
+      injectChanges: false,
+      files: [
+        'app/css/**/*.css',
+        'app/js/**/*.js',
+        'app/**/*.html'
+      ],
+      middleware: (req, res, next) => {
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+        res.setHeader('Pragma', 'no-cache');
+        res.setHeader('Expires', '0');
+        next();
+      }
+    });
+    resolve();
   });
+}
 
-  watch(paths.styles.watch, styles);
-  watch(paths.images.src, images);
-  watch(paths.scripts.watch, scripts);
-  watch([paths.pages.components + '/*', paths.pages.src], pages);
-  watch('app/*.html').on('change', browserSync.reload);
+// Отслеживание изменений
+function watching() {
+  const watchOptions = {
+    delay: 1000,
+    ignoreInitial: true
+  };
+
+  watch(paths.styles.watch, watchOptions, series(styles, (done) => {
+    setTimeout(() => {
+      browserSync.reload('*.css');
+      done();
+    }, 500);
+  }));
+
+  watch(paths.scripts.watch, watchOptions, series(scripts, (done) => {
+    setTimeout(() => {
+      browserSync.reload();
+      done();
+    }, 500);
+  }));
+
+  watch(paths.images.src, watchOptions, series(images, (done) => {
+    setTimeout(() => {
+      browserSync.reload();
+      done();
+    }, 500);
+  }));
+
+  watch([paths.pages.components + '/*', paths.pages.src], watchOptions, series(pages, (done) => {
+    setTimeout(() => {
+      browserSync.reload();
+      done();
+    }, 500);
+  }));
+
+  watch('app/*.html', watchOptions).on('change', () => {
+    setTimeout(() => browserSync.reload(), 500);
+  });
 }
 
 // Экспорт задач
@@ -162,5 +222,10 @@ exports.images = images;
 exports.fonts = fonts;
 exports.pages = pages;
 exports.sprite = sprite;
+exports.clean = cleanDist;
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, scripts, images, fonts, pages, watching);
+exports.default = series(
+  parallel(styles, scripts, images, fonts, pages),
+  serve,
+  watching
+);
