@@ -297,7 +297,7 @@ const phoneModal = ()=> {
 }
 
 const slidersBreakpoints = {
-  320: { // xs
+  375: { // xs
     slidesPerView: 1,
     spaceBetween: 20
   },

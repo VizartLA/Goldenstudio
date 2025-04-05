@@ -788,7 +788,7 @@ body {
     margin-bottom: 30px;
     margin-top: 30px;
     width: 98%;
-    padding-bottom: 20px;
+    padding: 15px;
     overflow: hidden;
     @include respond-to("sm") {
       width: 95%;
@@ -941,7 +941,7 @@ body {
   top: -200px;
 }
 .swiper-button-next {
-  right: -20px;
+  right: -40px;
   top: -200px;
 }
 
@@ -1067,7 +1067,7 @@ body {
     margin-bottom: 30px;
     margin-top: 40px;
     width: 98%;
-    padding-bottom: 20px;
+    padding: 15px;
     overflow: hidden;
   }
   &__item {
@@ -1133,6 +1133,11 @@ body {
     padding-bottom: 75px;
     position: relative;
     z-index: 2;
+
+    @include respond-to("sm") {
+      padding-left: 30px;
+
+    }
   }
   &__title {
     font-family: "Gilroy-Extrabold", Arial, sans-serif;
