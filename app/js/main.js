@@ -223,18 +223,26 @@ const burgerMenu = ()=>{
   }
 
   document.querySelectorAll('.accordeon__triger').forEach(trigger => {
-    trigger.addEventListener('click', () => {
+    trigger.addEventListener('click', (e) => {
       const item = trigger.closest('.accordeon__item');
-      item.classList.toggle('accordeon__item--active');
-
-      // Закрытие других открытых элементов
+      const isActive = item.classList.contains('accordeon__item--active');
+  
+      // Закрываем все
       document.querySelectorAll('.accordeon__item').forEach(otherItem => {
-        if (otherItem !== item) {
-          otherItem.classList.remove('accordeon__item--active');
-        }
+        otherItem.classList.remove('accordeon__item--active');
+        const icon = otherItem.querySelector('.accordeon__icon');
+        if (icon) icon.textContent = '+';
       });
+  
+      // Если не был активен — открываем и меняем знак
+      if (!isActive) {
+        item.classList.add('accordeon__item--active');
+        const icon = item.querySelector('.accordeon__icon');
+        if (icon) icon.textContent = '×';
+      }
     });
   });
+  
 }
 const phoneModal = ()=> {
   // Элементы модального окна обратного звонка
