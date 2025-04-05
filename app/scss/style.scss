@@ -745,7 +745,7 @@ body {
 .container-arrow {
   position: relative;
   padding: 0;
-  @include respond-to("lg") {
+  @include respond-to("xxl") {
     display: none;
   }
 }
