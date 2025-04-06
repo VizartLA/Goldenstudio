@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
+    "aos": "^2.3.4",
     "fonts": "^0.0.2",
     "swiper": "^11.2.6"
   },

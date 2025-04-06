@@ -343,6 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   });
 
+  AOS.init();
 
   parallaxFunc()
   playerFunc()

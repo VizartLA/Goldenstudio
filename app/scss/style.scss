@@ -1,6 +1,7 @@
 @use "reset";
 @use "helpers/breakpoints" as *;
 @use "../../node_modules/swiper/swiper-bundle";
+@use "../../node_modules/aos/dist/aos.css";
 
 @font-face {
   font-family: "Gilroy-Regular";

@@ -30,7 +30,7 @@ const paths = {
     dest: 'app/css'
   },
   scripts: {
-    src: ['node_modules/swiper/swiper-bundle.js', 'app/js/main.js'],
+    src: ['node_modules/swiper/swiper-bundle.js', "node_modules/aos/dist/aos.js", 'app/js/main.js',],
     watch: ['app/js/**/*.js', '!app/js/**/*.min.js'],
     dest: 'app/js'
   },
